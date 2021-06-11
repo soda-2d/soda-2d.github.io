@@ -63,6 +63,9 @@
                             <a class="active" href="download.html"><span>Download</span> <i class="bi bi-chevron-down"></i></a>
                             <ul> 
                                 <li>
+                                    <a href="download.html#instructions">Instructions</a>
+                                </li>
+                                <li>
                                     <a href="download.html#labeled">Labeled</a>
                                 </li>                                 
                                 <li>
@@ -86,10 +89,7 @@
                                 </li>                                 
                                 <li>
                                     <a href="about.html#terms_of_use">Terms of Use</a>
-                                </li>                                 
-                                <li>
-                                    <a href="about.html#privacy">Privacy</a>
-                                </li>                                 
+                                </li>                                                                  
                             </ul>                             
                         </li>                         
                     </ul>                     
@@ -106,9 +106,37 @@
             <section class="features"> 
                 <div class="container">
                     <div class="row aos-init aos-animate" data-aos="fade-up"> 
-</div>                     
-                    <span class="anchor" id="Labeled"></span>
-                    <h3><b>2D Labeled Data</b></h3>
+</div>              <span class="anchor" id="instructions"></span>
+                    <h3><b>Instructions</b></h3>
+                    <p>The instructions for downloading SODA10M is listed as follows:</p>
+                    <ol>
+                      <li>All compressed files need to be placed in the <b>same folder</b> for decompression, the standard path has been compressed into the file.</li>
+                      <li>For each unlabeled image split, please <b>"cat"</b> the different parts into one first.</li>
+                      <li>The SODA10M test set data will be released during the ICCV2021 workshop.</li>
+                    </ol>
+                    <p>After decompression, the data organization is listed as follows:</p>
+                    <pre style="text-align: left; white-space: pre; display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><code><b>"SODA10M":</b> {
+        |---SSLAD-2D
+            |---Labeled
+                |---train
+                |---val
+                |---test
+                |---annotations
+                    |---instance_train.json
+                    |---instance_val.json
+                    |---instance_test.json
+            |---Unlabel
+                |---images
+                    |---images_*
+                |---annotations
+                    |---instance_unlabel_*.json
+        }</code></pre>
+                    <div class="row aos-init aos-animate" data-aos="fade-up">
+                        <div class="col-md-7 order-2 order-md-1 pt-5"> 
+</div>                         
+                    </div>
+                    <span class="anchor" id="labeled"></span>
+                    <h3><b>Labeled Data</b></h3>
                     <p class="fst-italic"> 
               The total files is about 5.6GB, and the extraction code for Baidu Yunpan is 1234. </p>
                     <p> 
@@ -120,7 +148,7 @@
 </div>                         
                     </div>
                     <span class="anchor" id="unlabeled"></span>
-                    <h3><b>2D UnLabeled Data</b></h3>
+                    <h3><b>UnLabeled Data</b></h3>
                     <p class="fst-italic"> 
                         The total files is about 2TB, and the extraction code for Baidu Yunpan is 1234. </p>
 

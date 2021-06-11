@@ -63,6 +63,9 @@
                             <a href="download.html"><span>Download</span> <i class="bi bi-chevron-down"></i></a>
                             <ul> 
                                 <li>
+                                    <a href="download.html#instructions">Instructions</a>
+                                </li>
+                                <li>
                                     <a href="download.html#labeled">Labeled</a>
                                 </li>                                 
                                 <li>
@@ -86,10 +89,7 @@
                                 </li>                                 
                                 <li>
                                     <a href="about.html#terms_of_use">Terms of Use</a>
-                                </li>                                 
-                                <li>
-                                    <a href="about.html#privacy">Privacy</a>
-                                </li>                                 
+                                </li>                                                               
                             </ul>                             
                         </li>                         
                     </ul>                     
@@ -116,20 +116,43 @@
                     The horizon needs to be kept at the center of the image and the occlusion inside the car should not exceed 15% of the whole picture.
                     To achieve more diversity, suppliers are required to obtain images in diverse weather conditions, periods, locations and cities. 
                     See Appendix for detailed attribute settings and descriptions. </p>
+
+                    <p><b>Privacy protection</b>: The driving scenes are collected in permitted areas. We comply with the local regulations and avoid releasing any localization information, including GPS and cartographic information. For privacy protection, we actively detect any object on each image that may contain personal information, such as human faces and license plates, with a high recall rate. Then, we blur those detected objects to ensure that no personal information is disclosed.</p>
                     <div class="row aos-init aos-animate" data-aos="fade-up">
                         <div class="col-md-7 order-2 order-md-1 pt-5"> 
 </div>                         
                     </div>
                     <span class="anchor" id="data_format"></span>
-                    <h3><b>Data Format and Annotation</b></h3>
-                    <p> 
-              Coming soon.</p>
+                    <h3><b>Data Format</b></h3>
+                            <p> The annotation file keeps consistent with <b>COCO format</b> and contains three keys: "images", "categories" and "annotations".</p>
+                    <pre style="text-align: left; white-space: pre; display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><code><b>"images":</b> {
+        "file_name": &lt;str&gt; -- File name.
+        "id": &lt;int&gt;  -- Unique image id.
+        "height": &lt;float&gt;  -- Height of the image.
+        "width": &lt;float&gt; -- Width of the image.
+        "city": &lt;str&gt; -- City tag.
+        "location": &lt;str&gt; -- Location tag.
+        "period": &lt;str&gt; -- Period tag.
+        "weather": &lt;str&gt; -- Weather tag.}</code></pre>
+
+                    <pre style="text-align: left; white-space: pre; display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><code><b>"annotations":</b> {
+        "image_id": &lt;int&gt; -- The image id for this annotation.
+        "category_id": &lt;int&gt; -- The category id.
+        "bbox": &lt;list&gt; -- Coordinate of boundingbox [x, y, w, h].
+        "area": &lt;float&gt; -- Area of this annotation (w * h).
+        "id": &lt;int&gt; -- Unique annotation id.
+        "iscrowd": &lt;int&gt; -- Whether this annotation is crowd. Note that iscrowd is always 0.}</code></pre>
+
+                    <pre style="text-align: left; white-space: pre; display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><code><b>"categories":</b> {
+        "name": &lt;str&gt; -- Unique category name.
+        "id": &lt;int&gt; Unique category id.
+        "supercategory": &lt;str&gt; The supercategory for this category.}</code></pre>
                     <div class="col-md-7 order-2 order-md-1 pt-5"> 
 </div>
-                    <span class="anchor" id="data_toolkits"></span>
-                    <h3><b>Data Toolkits</b></h3>
-                    <p class="fst-italic"> 
-              Coming soon. </p>
+                    <span class="anchor" id="data_annotation"></span>
+                    <h3><b>Data Annotation</b></h3>
+                    <p> 
+                    Image tags (i.e., weather conditions, location scenes, periods) for all images and 2D bounding boxes for labeled parts are annotated for SODA10M. </p>
 
                     <h3></h3>
                     <h3></h3>
